@@ -18,5 +18,5 @@ public interface BadgeRepository extends CrudRepository<BadgeEntity, Long> {
     // delete(BadgeEntity entity)
     // deleteAll(Iterable<? extends BadgeEntity> entities)
     // deleteAll()
-    //:)
+    //:)))) 
 }
