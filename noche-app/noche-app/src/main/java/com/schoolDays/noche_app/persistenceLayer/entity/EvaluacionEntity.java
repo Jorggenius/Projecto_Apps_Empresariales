@@ -5,30 +5,32 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 /**
- * Entidad que representa la tabla modulos
+ * Entidad que representa la tabla evaluaciones
  */
 @Entity
-@Table(name = "modulos")
+@Table(name = "evaluaciones")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ModuloEntity {
+public class EvaluacionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Relación con Curso
-    @Column(name = "curso_id", nullable = false)
-    private Long cursoId;
+    // Relación con Modulo
+    @Column(name = "modulo_id", nullable = false)
+    private Long moduloId;
 
     @Column(nullable = false, length = 150)
     private String titulo;
 
     @Column(nullable = false, length = 50)
-    private String tipo; // Ej: Video, Texto, Quiz, PDF, Práctica
+    private String tipo; // Ej: MCQ, Abierta, Mixta
 
-    @Column(nullable = false)
-    private Integer orden;
+    @Column(name = "puntaje_max", nullable = false, precision = 5, scale = 2)
+    private BigDecimal puntajeMax;
 }
