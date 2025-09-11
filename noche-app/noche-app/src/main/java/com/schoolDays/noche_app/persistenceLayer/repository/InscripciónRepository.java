@@ -1,4 +1,4 @@
 package com.schoolDays.noche_app.persistenceLayer.repository;
 
-public class InscripciónRepository git sw{
+public interface InscripciónRepository {
 }
