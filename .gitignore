@@ -24,6 +24,7 @@ out/
 *.war
 *.ear
 *.log
+*.bin
 
 ### Sistema ###
 *.DS_Store
