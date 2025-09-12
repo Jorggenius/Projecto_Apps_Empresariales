@@ -5,32 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4394d4e-2526-4eeb-be8c-cab11e8491c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/BadgeCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/BadgeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/BadgeUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CertificadoCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CertificadoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CertificadoUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CursoCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CursoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CursoUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/EvaluacionCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/EvaluacionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/EvaluacionUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/InscripcionCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/InscripcionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/InscripcionUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/ModuloCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/ModuloDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/ModuloUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/RespuestaCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/RespuestaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/RespuestaUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/UsuarioCreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/UsuarioDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/UsuarioUpdateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Projecto_Apps_Empresariales" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/BadgeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/CertificadoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/CursoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/EvaluacionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/InscripcionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/ModuloMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/RespuestaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/UsuarioMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/schoolDays/noche_app/persistenceLayer/repository/InscripciónRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/schoolDays/noche_app/persistenceLayer/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/CursoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/CursoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/EvaluacionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/EvaluacionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/ModuloEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/ModuloEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/entity/UsuarioEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +60,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -102,6 +100,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

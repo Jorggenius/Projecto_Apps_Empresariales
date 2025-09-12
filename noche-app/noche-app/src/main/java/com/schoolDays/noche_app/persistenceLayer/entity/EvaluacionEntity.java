@@ -33,4 +33,8 @@ public class EvaluacionEntity {
 
     @Column(name = "puntaje_max", nullable = false, precision = 5, scale = 2)
     private BigDecimal puntajeMax;
+
+    public void setId(Long id) {
+
+    }
 }
