@@ -31,4 +31,8 @@ public class ModuloEntity {
 
     @Column(nullable = false)
     private Integer orden;
+
+    public void setId(Long id) {
+
+    }
 }

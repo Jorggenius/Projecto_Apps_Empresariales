@@ -30,4 +30,12 @@ public class UsuarioEntity {
 
     @Column(length = 100)
     private String departamento;
+
+    public void setId(Long id) {
+
+    }
+
+    public Long getId() {
+        return null;
+    }
 }

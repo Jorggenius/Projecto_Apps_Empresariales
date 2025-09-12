@@ -30,4 +30,11 @@ public class CursoEntity {
 
     @Column(nullable = false, length = 50)
     private String nivel; // Ej: Básico, Intermedio, Avanzado
+
+    public void setId(Long id) {
+    }
+
+    public Long getId() {
+        return null;
+    }
 }
