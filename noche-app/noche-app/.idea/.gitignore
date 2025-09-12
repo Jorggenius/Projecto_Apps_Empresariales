@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+# Default ignored files
+/shelf/
+/workspace.xml
+=======
+### Gradle ###
+.gradle/
+build/
+out/
+
+# Gradle wrapper (sí se versiona estos 4)
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
+
+### VSCode ###
+.vscode/
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+### Sistema ###
+*.DS_Store
+Thumbs.db
+>>>>>>> ee201491a21e3d7adee11d65ed17a1a7495e69be
