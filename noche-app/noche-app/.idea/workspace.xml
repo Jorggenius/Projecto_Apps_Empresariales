@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4394d4e-2526-4eeb-be8c-cab11e8491c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/RolDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/CursoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/ModuloMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/RolMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/PreguntaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/PreguntaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/RespuestaMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
@@ -16,10 +15,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CursoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/CursoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/ModuloDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/ModuloDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/RespuestaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/businessLayer/dto/RespuestaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/EvaluacionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schoolDays/noche_app/persistenceLayer/mapper/EvaluacionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1757571594095</updated>
       <workItem from="1757571595413" duration="2865000" />
-      <workItem from="1757741460002" duration="8551000" />
+      <workItem from="1757741460002" duration="9899000" />
     </task>
     <servers />
   </component>

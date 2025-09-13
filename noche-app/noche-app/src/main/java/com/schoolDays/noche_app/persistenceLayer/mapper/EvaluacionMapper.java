@@ -9,6 +9,7 @@ import java.util.List;
 
 @Mapper(
         componentModel = "spring",
+        uses = {PreguntaMapper.class}, // 👈 Se integran preguntas (y respuestas en cascada)
         unmappedTargetPolicy = ReportingPolicy.WARN
 )
 public interface EvaluacionMapper {
@@ -18,21 +19,22 @@ public interface EvaluacionMapper {
     @Mapping(target = "moduloTitulo", source = "modulo.titulo")
     EvaluacionDTO toDTO(EvaluacionEntity entity);
 
-    // Lista de Entity → Lista de DTO
     List<EvaluacionDTO> toDTOList(List<EvaluacionEntity> entities);
 
     // DTO → Entity (crear)
     @Mapping(target = "idEvaluacion", ignore = true)
     @Mapping(target = "modulo", source = "moduloId", qualifiedByName = "createModuloEntityFromId")
+    @Mapping(target = "preguntas", ignore = true) // las maneja el servicio
     EvaluacionEntity toEntity(EvaluacionDTO dto);
 
     // Actualización parcial
     @Mapping(target = "idEvaluacion", ignore = true)
-    @Mapping(target = "modulo", ignore = true) // no se cambia el módulo en update
+    @Mapping(target = "modulo", ignore = true)    // no se cambia el módulo
+    @Mapping(target = "preguntas", ignore = true) // no se pisan las preguntas
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void updateEntityFromDTO(EvaluacionDTO dto, @MappingTarget EvaluacionEntity entity);
 
-    // Auxiliar: crea un ModuloEntity con solo ID
+    // Auxiliar: crear un ModuloEntity solo con ID
     @Named("createModuloEntityFromId")
     default ModuloEntity createModuloEntityFromId(Integer idModulo) {
         if (idModulo == null) {

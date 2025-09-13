@@ -11,28 +11,18 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(description = "Información completa de una respuesta")
+@Schema(description = "Información de una respuesta de una pregunta")
 public class RespuestaDTO {
 
-    @Schema(description = "ID único de la respuesta",
-            example = "101", accessMode = Schema.AccessMode.READ_ONLY)
-    private Long id;
+    @Schema(description = "ID único de la respuesta", example = "15", accessMode = Schema.AccessMode.READ_ONLY)
+    private Integer idRespuesta;
 
-    @Schema(description = "ID de la evaluación asociada", example = "5")
-    private Long evaluacionId;
+    @Schema(description = "Contenido de la respuesta", example = "La respuesta correcta es A")
+    private String contenido;
 
-    @Schema(description = "ID del usuario que responde", example = "12")
-    private Long usuarioId;
+    @Schema(description = "Indica si la respuesta es correcta", example = "true")
+    private Boolean esCorrecta;
 
-    @Schema(description = "Nombre del usuario que responde",
-            example = "Carlos Ramírez", accessMode = Schema.AccessMode.READ_ONLY)
-    private String usuarioNombre;
-
-    @Schema(description = "Puntuación obtenida en la respuesta",
-            example = "4.50")
-    private BigDecimal puntuacion;
-
-    @Schema(description = "Fecha en que se registró la respuesta",
-            example = "2025-09-11")
-    private LocalDate fecha;
+    @Schema(description = "ID de la pregunta asociada", example = "7")
+    private Integer preguntaId;
 }
