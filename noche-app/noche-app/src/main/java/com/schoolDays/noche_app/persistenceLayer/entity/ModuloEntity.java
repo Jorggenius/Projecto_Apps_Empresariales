@@ -1,38 +1,46 @@
 package com.schoolDays.noche_app.persistenceLayer.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 /**
  * Entidad que representa la tabla modulos
  */
 @Entity
-@Table(name = "modulos")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "Modulo")
+@Getter
+@Setter
+@NoArgsConstructor @AllArgsConstructor
 public class ModuloEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    // Relación con Curso
-    @Column(name = "curso_id", nullable = false)
-    private Long cursoId;
+    private Integer idModulo;
 
     @Column(nullable = false, length = 150)
     private String titulo;
 
-    @Column(nullable = false, length = 50)
-    private String tipo; // Ej: Video, Texto, Quiz, PDF, Práctica
+    @Lob
+    private String descripcion;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TipoModulo tipo;
 
     @Column(nullable = false)
     private Integer orden;
 
-    public void setId(Long id) {
+    private Integer version = 1;
 
+    @ManyToOne
+    @JoinColumn(name = "idCurso", nullable = false)
+    private CursoEntity curso;
+
+    @OneToMany(mappedBy = "modulo")
+    private List<EvaluacionEntity> evaluaciones;
+
+    public enum TipoModulo {
+        Video, Texto, PDF, Quiz, Practica
     }
 }

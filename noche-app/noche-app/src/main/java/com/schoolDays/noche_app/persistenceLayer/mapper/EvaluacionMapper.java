@@ -1,8 +1,6 @@
 package com.schoolDays.noche_app.persistenceLayer.mapper;
 
-import com.schoolDays.noche_app.businessLayer.dto.EvaluacionCreateDTO;
 import com.schoolDays.noche_app.businessLayer.dto.EvaluacionDTO;
-import com.schoolDays.noche_app.businessLayer.dto.EvaluacionUpdateDTO;
 import com.schoolDays.noche_app.persistenceLayer.entity.EvaluacionEntity;
 import com.schoolDays.noche_app.persistenceLayer.entity.ModuloEntity;
 import org.mapstruct.*;
@@ -11,49 +9,39 @@ import java.util.List;
 
 @Mapper(
         componentModel = "spring",
+        uses = {PreguntaMapper.class}, // 👈 Se integran preguntas (y respuestas en cascada)
         unmappedTargetPolicy = ReportingPolicy.WARN
 )
 public interface EvaluacionMapper {
 
-    // ===== Entity -> DTO (LECTURA ENRIQUECIDA) =====
-    @Mapping(target = "moduloId",     source = "modulo.id")
+    // Entity → DTO
+    @Mapping(target = "moduloId", source = "modulo.idModulo")
     @Mapping(target = "moduloTitulo", source = "modulo.titulo")
     EvaluacionDTO toDTO(EvaluacionEntity entity);
 
     List<EvaluacionDTO> toDTOList(List<EvaluacionEntity> entities);
 
-    // ===== CreateDTO -> Entity (CREAR) =====
-    // Mapea moduloId -> modulo (entidad placeholder por ID)
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "modulo", source = "moduloId", qualifiedByName = "moduloFromId")
-    // Quita estas dos líneas si tu entidad NO tiene auditoría:
-    @Mapping(target = "createdAt", ignore = true)
-    @Mapping(target = "updatedAt", ignore = true)
-    EvaluacionEntity toEntity(EvaluacionCreateDTO dto);
-
-    // ===== UpdateDTO -> Entity (PATCH parcial) =====
-    // No permite cambiar el módulo en update (regla de negocio)
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "modulo", ignore = true)
-    // Quita si no tienes auditoría:
-    @Mapping(target = "createdAt", ignore = true)
-    @Mapping(target = "updatedAt", ignore = true)
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    void updateEntityFromDTO(EvaluacionUpdateDTO dto, @MappingTarget EvaluacionEntity entity);
-
-    // ===== DTO -> Entity (opcional: útil en tests) =====
-    @Mapping(target = "modulo", source = "moduloId", qualifiedByName = "moduloFromId")
-    // Quita si no tienes auditoría:
-    @Mapping(target = "createdAt", ignore = true)
-    @Mapping(target = "updatedAt", ignore = true)
+    // DTO → Entity (crear)
+    @Mapping(target = "idEvaluacion", ignore = true)
+    @Mapping(target = "modulo", source = "moduloId", qualifiedByName = "createModuloEntityFromId")
+    @Mapping(target = "preguntas", ignore = true) // las maneja el servicio
     EvaluacionEntity toEntity(EvaluacionDTO dto);
 
-    // ===== Helper: construir ModuloEntity por ID (sin ir a la BD) =====
-    @Named("moduloFromId")
-    default ModuloEntity moduloFromId(Long id) {
-        if (id == null) return null;
-        ModuloEntity m = new ModuloEntity();
-        m.setId(id);
-        return m;
+    // Actualización parcial
+    @Mapping(target = "idEvaluacion", ignore = true)
+    @Mapping(target = "modulo", ignore = true)    // no se cambia el módulo
+    @Mapping(target = "preguntas", ignore = true) // no se pisan las preguntas
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    void updateEntityFromDTO(EvaluacionDTO dto, @MappingTarget EvaluacionEntity entity);
+
+    // Auxiliar: crear un ModuloEntity solo con ID
+    @Named("createModuloEntityFromId")
+    default ModuloEntity createModuloEntityFromId(Integer idModulo) {
+        if (idModulo == null) {
+            return null;
+        }
+        ModuloEntity modulo = new ModuloEntity();
+        modulo.setIdModulo(idModulo);
+        return modulo;
     }
 }

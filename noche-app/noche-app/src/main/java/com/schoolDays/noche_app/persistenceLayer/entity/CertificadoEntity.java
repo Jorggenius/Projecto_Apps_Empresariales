@@ -2,8 +2,9 @@ package com.schoolDays.noche_app.persistenceLayer.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
@@ -11,27 +12,24 @@ import java.time.LocalDate;
  * Entidad que representa la tabla certificados
  */
 @Entity
-@Table(name = "certificados")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "Certificado")
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class CertificadoEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer idCertificado;
 
-    // Relación con Usuario
-    @Column(name = "usuario_id", nullable = false)
-    private Long usuarioId;
+    @ManyToOne
+    @JoinColumn(name = "idUsuario", nullable = false)
+    private UsuarioEntity usuario;
 
-    // Relación con Curso
-    @Column(name = "curso_id", nullable = false)
-    private Long cursoId;
+    @ManyToOne
+    @JoinColumn(name = "idCurso", nullable = false)
+    private CursoEntity curso;
 
-    @Column(name = "fecha_emision", nullable = false)
+    @Column(nullable = false)
     private LocalDate fechaEmision;
 
-    @Column(nullable = false, unique = true, length = 255)
-    private String hash; // Código único de verificación del certificado
+    @Column(nullable = false, unique = true)
+    private String hash;
 }

@@ -14,38 +14,33 @@ import lombok.NoArgsConstructor;
  *
  * USO: GET /usuarios/{id}, GET /usuarios, respuestas de POST/PUT
  */
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(description = "Información del usuario")
+@Schema(description = "Información completa de un usuario")
 public class UsuarioDTO {
 
-    @Schema(description = "ID único del usuario",
-            example = "1",
-            accessMode = Schema.AccessMode.READ_ONLY)
-    private Long id;
+    @Schema(description = "ID único del usuario", example = "1")
+    private Integer idUsuario;
 
-    @Schema(description = "Nombre completo del usuario",
-            example = "María González",
-            required = true,
-            maxLength = 100)
+    @Schema(description = "Nombre del usuario", example = "Carlos")
     private String nombre;
 
-    @Schema(description = "Correo electrónico único del usuario",
-            example = "maria.gonzalez@empresa.com",
-            required = true,
-            maxLength = 150)
-    private String email;
+    @Schema(description = "Apellido del usuario", example = "Pérez")
+    private String apellido;
 
-    @Schema(description = "Rol del usuario en el sistema",
-            example = "INSTRUCTOR",
-            required = true,
-            maxLength = 50,
-            allowableValues = {"ADMIN", "INSTRUCTOR", "USER"})
-    private String rol;
+    @Schema(description = "Correo electrónico", example = "carlos.perez@empresa.com")
+    private String correo;
 
-    @Schema(description = "Departamento/área del usuario",
-            example = "Talento Humano",
-            maxLength = 100)
+    @Schema(description = "Departamento del usuario", example = "Ventas")
     private String departamento;
+
+    @Schema(description = "ID del rol", example = "2")
+    private Integer rolId;
+
+    @Schema(description = "Nombre del rol", example = "Instructor")
+    private String rolNombre;
 }

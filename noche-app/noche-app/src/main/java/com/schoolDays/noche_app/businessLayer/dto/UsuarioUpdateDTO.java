@@ -22,25 +22,27 @@ import lombok.NoArgsConstructor;
  *
  * USO: PUT/PATCH /usuarios/{id}
  */
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "Datos para actualizar un usuario existente")
 public class UsuarioUpdateDTO {
 
-    @Schema(description = "Nombre completo del usuario",
-            example = "María G. Rodríguez",
-            maxLength = 100)
+    @Schema(description = "Nombre del usuario", example = "Ana")
     private String nombre;
 
-    @Schema(description = "Nuevo rol del usuario",
-            example = "ADMIN",
-            maxLength = 50,
-            allowableValues = {"ADMIN", "INSTRUCTOR", "USER"})
-    private String rol;
+    @Schema(description = "Apellido del usuario", example = "Martínez")
+    private String apellido;
 
-    @Schema(description = "Departamento/área del usuario",
-            example = "Formación y Desarrollo",
-            maxLength = 100)
+    @Schema(description = "Correo electrónico único", example = "ana.martinez@empresa.com")
+    private String correo;
+
+    @Schema(description = "Contraseña", example = "nuevaPassword123")
+    private String contrasena;
+
+    @Schema(description = "Departamento del usuario", example = "Recursos Humanos")
     private String departamento;
 }
