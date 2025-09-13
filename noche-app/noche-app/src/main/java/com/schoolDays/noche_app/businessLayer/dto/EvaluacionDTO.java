@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+import java.math.BigDecimal;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,29 +16,33 @@ import java.math.BigDecimal;
 public class EvaluacionDTO {
 
     @Schema(description = "ID único de la evaluación",
-            example = "15",
+            example = "101",
             accessMode = Schema.AccessMode.READ_ONLY)
-    private Long id;
-
-    @Schema(description = "ID del módulo al que pertenece la evaluación",
-            example = "7")
-    private Long moduloId;
-
-    @Schema(description = "Título del módulo asociado",
-            example = "Módulo de Programación Orientada a Objetos",
-            accessMode = Schema.AccessMode.READ_ONLY)
-    private String moduloTitulo;
+    private Integer idEvaluacion;
 
     @Schema(description = "Título de la evaluación",
-            example = "Examen Final de Java")
+            example = "Examen final de Java")
     private String titulo;
 
+    @Schema(description = "Descripción de la evaluación",
+            example = "Evaluación con preguntas teóricas y prácticas")
+    private String descripcion;
+
     @Schema(description = "Tipo de evaluación",
-            example = "Mixta",
+            example = "MCQ",
             allowableValues = {"MCQ", "Abierta", "Mixta"})
     private String tipo;
 
-    @Schema(description = "Puntaje máximo posible en la evaluación",
+    @Schema(description = "Puntaje máximo de la evaluación",
             example = "100.00")
     private BigDecimal puntajeMax;
+
+    @Schema(description = "ID del módulo al que pertenece",
+            example = "12")
+    private Integer moduloId;
+
+    @Schema(description = "Título del módulo asociado",
+            example = "Introducción a Java",
+            accessMode = Schema.AccessMode.READ_ONLY)
+    private String moduloTitulo;
 }
