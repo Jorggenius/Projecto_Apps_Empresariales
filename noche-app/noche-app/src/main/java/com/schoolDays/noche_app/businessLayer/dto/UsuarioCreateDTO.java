@@ -21,33 +21,30 @@ import lombok.NoArgsConstructor;
  *
  * USO: POST /usuarios
  */
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(description = "Datos para crear un nuevo usuario")
+@Schema(description = "Datos necesarios para crear un usuario")
 public class UsuarioCreateDTO {
 
-    @Schema(description = "Nombre completo del usuario",
-            example = "María González",
-            required = true,
-            maxLength = 100)
+    @Schema(description = "Nombre del usuario", required = true, example = "Ana")
     private String nombre;
 
-    @Schema(description = "Correo electrónico único del usuario",
-            example = "maria.gonzalez@empresa.com",
-            required = true,
-            maxLength = 150)
-    private String email;
+    @Schema(description = "Apellido del usuario", required = true, example = "Martínez")
+    private String apellido;
 
-    @Schema(description = "Rol del usuario en el sistema",
-            example = "INSTRUCTOR",
-            required = true,
-            maxLength = 50,
-            allowableValues = {"ADMIN", "INSTRUCTOR", "USER"})
-    private String rol;
+    @Schema(description = "Correo electrónico único", required = true, example = "ana.martinez@empresa.com")
+    private String correo;
 
-    @Schema(description = "Departamento/área del usuario",
-            example = "Talento Humano",
-            maxLength = 100)
+    @Schema(description = "Contraseña", required = true, example = "password123")
+    private String contrasena;
+
+    @Schema(description = "Departamento del usuario", example = "Recursos Humanos")
     private String departamento;
+
+    @Schema(description = "ID del rol asignado al usuario", required = true, example = "1")
+    private Integer rolId;
 }
